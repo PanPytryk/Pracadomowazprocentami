@@ -1,21 +1,3 @@
-'''
-Stwórz program, który na podstawie
-
-tabeli inflacji wartości
-oprocentowania kredytu,
-kwoty początkowej kredytu
-stałej wartości raty
-wyliczy wartość zadłużenia w każdym miesiącu przez 2 nadchodzące lata.
-
-Niech program wydrukuje dla każdego miesiąca następującą linię:
-Twoja pozostała kwota kredytu to X, to Y mniej niż w poprzednim miesiącu.
-
-Napisz program tak, by wysokość początkowego kredytu, oprocentowanie kredytu (ponad inflację) i kwota raty były pobierane ze standardowego wejścia (terminal).
-
-Przykładowe wartości kredytu i formułę do jego wyliczenia znajdziesz w załączniku powyżej. Skopiuj z niego wartości inflacji dla każdego miesiąca.
-
-Wyślij link do swojego repozytorium (nie spakowany kod). Repozytorium powinno zawierać więcej, niż jeden commit.
-'''
 
 inflacja_1 = 1.59282448436825
 inflacja_2 = -0.453509101198007
@@ -51,7 +33,49 @@ print(f'Oprocentowanie to: {oprocentowanie_kredytu},',
 kwota_po_pierwszej_racie =(1 + ((inflacja_1 + oprocentowanie_kredytu)/1200)) * kwota_poczatkowa_kredytu- stala_wartosc_raty
 kwota_po_drugiej_racie =(1 + ((inflacja_2 + oprocentowanie_kredytu)/1200)) * kwota_po_pierwszej_racie - stala_wartosc_raty
 kwota_po_trzeciej_racie =(1 + ((inflacja_3 + oprocentowanie_kredytu)/1200)) * kwota_po_drugiej_racie - stala_wartosc_raty
+kwota_po_czwartej_racie =(1 + ((inflacja_4 + oprocentowanie_kredytu)/1200)) * kwota_po_trzeciej_racie - stala_wartosc_raty
+kwota_po_piatej_racie =(1 + ((inflacja_5 + oprocentowanie_kredytu)/1200)) * kwota_po_czwartej_racie - stala_wartosc_raty
+kwota_po_szostej_racie =(1 + ((inflacja_6 + oprocentowanie_kredytu)/1200)) * kwota_po_piatej_racie - stala_wartosc_raty
+kwota_po_siodmej_racie =(1 + ((inflacja_7 + oprocentowanie_kredytu)/1200)) * kwota_po_szostej_racie - stala_wartosc_raty
+kwota_po_osmej_racie =(1 + ((inflacja_8 + oprocentowanie_kredytu)/1200)) * kwota_po_siodmej_racie - stala_wartosc_raty
+kwota_po_dziewiatej_racie =(1 + ((inflacja_9 + oprocentowanie_kredytu)/1200)) * kwota_po_osmej_racie - stala_wartosc_raty
+kwota_po_dziesiatej_racie =(1 + ((inflacja_10 + oprocentowanie_kredytu)/1200)) * kwota_po_dziewiatej_racie - stala_wartosc_raty
+kwota_po_jedynastej_racie =(1 + ((inflacja_11 + oprocentowanie_kredytu)/1200)) * kwota_po_dziesiatej_racie - stala_wartosc_raty
+kwota_po_dwunastej_racie =(1 + ((inflacja_12 + oprocentowanie_kredytu)/1200)) * kwota_po_jedynastej_racie - stala_wartosc_raty
+kwota_po_trzynastej_racie =(1 + ((inflacja_13 + oprocentowanie_kredytu)/1200)) * kwota_po_dwunastej_racie - stala_wartosc_raty
+kwota_po_czternastej_racie =(1 + ((inflacja_14 + oprocentowanie_kredytu)/1200)) * kwota_po_trzynastej_racie - stala_wartosc_raty
+kwota_po_pietnastej_racie =(1 + ((inflacja_15 + oprocentowanie_kredytu)/1200)) * kwota_po_czternastej_racie - stala_wartosc_raty
+kwota_po_szesnastej_racie =(1 + ((inflacja_16 + oprocentowanie_kredytu)/1200)) * kwota_po_pietnastej_racie - stala_wartosc_raty
+kwota_po_siedemnastej_racie =(1 + ((inflacja_17 + oprocentowanie_kredytu)/1200)) * kwota_po_szesnastej_racie - stala_wartosc_raty
+kwota_po_osiemnastej_racie =(1 + ((inflacja_18 + oprocentowanie_kredytu)/1200)) * kwota_po_siedemnastej_racie - stala_wartosc_raty
+kwota_po_dziewietnastej_racie =(1 + ((inflacja_19 + oprocentowanie_kredytu)/1200)) * kwota_po_osiemnastej_racie - stala_wartosc_raty
+kwota_po_dwodziestej_racie =(1 + ((inflacja_20 + oprocentowanie_kredytu)/1200)) * kwota_po_dziewiatej_racie - stala_wartosc_raty
+kwota_po_dwodziestejpierwszej_racie =(1 + ((inflacja_21 + oprocentowanie_kredytu)/1200)) * kwota_po_dwodziestej_racie - stala_wartosc_raty
+kwota_po_dwodziestejdrugiej_racie =(1 + ((inflacja_22 + oprocentowanie_kredytu)/1200)) * kwota_po_dwodziestejpierwszej_racie - stala_wartosc_raty
+kwota_po_dwodziestejtrzeciej_racie =(1 + ((inflacja_23 + oprocentowanie_kredytu)/1200)) * kwota_po_dwodziestejdrugiej_racie - stala_wartosc_raty
+kwota_po_dwodziestejczwartej_racie =(1 + ((inflacja_24 + oprocentowanie_kredytu)/1200)) * kwota_po_dwodziestejtrzeciej_racie - stala_wartosc_raty
 
 print(kwota_po_pierwszej_racie)
 print(kwota_po_drugiej_racie)
 print(kwota_po_trzeciej_racie)
+print(kwota_po_czwartej_racie)
+print(kwota_po_piatej_racie)
+print(kwota_po_szostej_racie)
+print(kwota_po_siodmej_racie)
+print(kwota_po_osmej_racie)
+print(kwota_po_dziewiatej_racie)
+print(kwota_po_dziesiatej_racie)
+print(kwota_po_jedynastej_racie)
+print(kwota_po_dwunastej_racie)
+print(kwota_po_trzynastej_racie)
+print(kwota_po_czternastej_racie)
+print(kwota_po_pietnastej_racie)
+print(kwota_po_szesnastej_racie)
+print(kwota_po_siedemnastej_racie)
+print(kwota_po_osiemnastej_racie)
+print(kwota_po_dziewietnastej_racie)
+print(kwota_po_dwodziestej_racie)
+print(kwota_po_dwodziestejpierwszej_racie)
+print(kwota_po_dwodziestejdrugiej_racie)
+print(kwota_po_dwodziestejtrzeciej_racie)
+print(kwota_po_dwodziestejczwartej_racie)
